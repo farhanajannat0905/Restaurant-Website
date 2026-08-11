@@ -1,0 +1,40 @@
+
+// Smooth Scrolling
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Card Hover Effect
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = "scale(1.05)";
+        card.style.transition = "0.3s";
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = "scale(1)";
+    });
+});
+
+// Greeting in Console
+const hour = new Date().getHours();
+
+if (hour < 12) {
+    console.log("🌞 Good Morning!");
+} else if (hour < 18) {
+    console.log("☀️ Good Afternoon!");
+} else {
+    console.log("🌙 Good Evening!");
+}

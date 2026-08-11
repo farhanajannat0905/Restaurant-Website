@@ -1,0 +1,1004 @@
+
+/* Remove the browser's default spacing */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Style the whole webpage */
+body {
+font-family: Arial, sans-serif;
+background-color: #fffaf2;
+}
+/* Style the top header */
+header {
+background-color: #5c2b1a;
+padding: 18px 8%;
+}
+/* Arrange the logo and navigation links */
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+/* Navbar Logo */
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #f5c76b;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-decoration: none;
+}
+
+
+/* Nokshi decorative symbol */
+.logo-symbol {
+    color: #e8b84f;
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+/* NOKSHI text */
+.logo-text {
+    line-height: 1;
+}
+/* Remove the bullet points and arrange links horizontally */
+nav ul {
+list-style: none;
+display: flex;
+gap: 28px;
+}
+/* Style the navigation links */
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+transition: color 0.3s;
+}
+/* Change the link color when the mouse is over it */
+nav ul li a:hover{
+    color: #f5c76b;
+}
+/* Highlight the current page */
+nav ul li a.active {
+color: #f5c76b;
+}
+/* ================= HERO SECTION ================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 8%;
+
+    background-image:
+    linear-gradient(
+        rgba(45, 18, 8, 0.50),
+        rgba(45, 18, 8, 0.50)
+    ),
+    url("images/hero-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* Hero text area */
+.hero-content {
+    max-width: 850px;
+
+    /* No visible box behind the text */
+    padding: 30px;
+
+    background: transparent;
+}
+
+
+/* Small golden subtitle */
+.hero-subtitle {
+    color: #e6b75e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Main heading */
+.hero h1 {
+    color: #fff8e8;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 72px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        2px 3px 8px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Description */
+.hero-description {
+    color: #f8ead5;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    text-shadow:
+        1px 2px 5px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Explore Menu button */
+.hero-button {
+    display: inline-block;
+
+    background-color: #e8b84f;
+
+    color: #43200f;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    padding: 17px 34px;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+
+/* Button hover */
+.hero-button:hover {
+    background-color: #f5ca6d;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 23px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= WELCOME SECTION ================= */
+
+.welcome {
+    display: flex;
+
+    align-items: center;
+
+    gap: 85px;
+
+    padding: 120px 10%;
+
+    background-color: #fffaf2;
+}
+
+
+/* Image side */
+.welcome-image {
+    position: relative;
+
+    width: 48%;
+}
+
+
+/* Main image */
+.welcome-image img {
+    width: 100%;
+
+    height: 470px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    box-shadow:
+        18px 18px 0 #ead5b5,
+        0 15px 35px rgba(60, 30, 15, 0.18);
+}
+
+
+/* Years of tradition box */
+.experience-box {
+    position: absolute;
+
+    right: -35px;
+
+    bottom: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 22px 25px;
+
+    background-color: #5c2b1a;
+
+    color: white;
+
+    border-left: 5px solid #e8b84f;
+
+    box-shadow:
+        0 12px 25px rgba(50, 20, 10, 0.25);
+}
+
+
+/* 10+ */
+.experience-box span {
+    color: #f5c76b;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* Years of Tradition */
+.experience-box p {
+    color: white;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* Text side */
+.welcome-content {
+    width: 52%;
+}
+
+
+/* Small gold title */
+.section-subtitle {
+    color: #b97925;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Main heading */
+.welcome-content h2 {
+    color: #4a2113;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 54px;
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+/* Small decorative line */
+.title-line {
+    width: 75px;
+
+    height: 3px;
+
+    background-color: #e8b84f;
+
+    margin-bottom: 28px;
+}
+
+
+/* Description */
+.welcome-description {
+    color: #6d5549;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 16px;
+}
+
+
+/* Story button */
+.welcome-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    padding: 15px 25px;
+
+    background-color: #5c2b1a;
+
+    color: white;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+/* Arrow */
+.welcome-button span {
+    color: #f5c76b;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+.welcome-button:hover {
+    background-color: #8a4728;
+
+    transform: translateY(-3px);
+}
+
+
+.welcome-button:hover span {
+    transform: translateX(5px);
+}
+/* ================= FEATURED DISHES ================= */
+
+.featured {
+    padding: 115px 10%;
+
+    background-color: #f2e4d1;
+
+    text-align: center;
+}
+
+
+/* Section heading */
+.featured-heading {
+    max-width: 650px;
+
+    margin: 0 auto 55px;
+}
+
+
+.featured-heading h2 {
+    color: #4a2113;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 56px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+.featured-heading > p:last-child {
+    color: #70584b;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Three cards */
+.food-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    text-align: left;
+}
+
+
+/* Individual card */
+.food-card {
+    overflow: hidden;
+
+    background-color: white;
+
+    box-shadow:
+        0 12px 30px rgba(70, 35, 18, 0.12);
+
+    transition: 0.35s;
+}
+
+
+.food-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(70, 35, 18, 0.2);
+}
+
+
+/* Food image */
+.food-image {
+    position: relative;
+
+    height: 250px;
+
+    overflow: hidden;
+}
+
+
+.food-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.food-card:hover .food-image img {
+    transform: scale(1.08);
+}
+
+
+/* Food label */
+.food-tag {
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    padding: 7px 13px;
+
+    background-color: #e8b84f;
+
+    color: #4a2113;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* Card text */
+.food-info {
+    padding: 25px;
+}
+
+
+/* Dish name and price */
+.food-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.food-title h3 {
+    color: #4a2113;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 29px;
+
+    font-weight: 700;
+}
+
+
+.food-title span {
+    color: #b97925;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.food-info p {
+    color: #765f53;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* Full menu button */
+.view-menu-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 50px;
+
+    padding: 16px 28px;
+
+    border: 2px solid #5c2b1a;
+
+    color: #5c2b1a;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.view-menu-button:hover {
+    background-color: #5c2b1a;
+
+    color: white;
+}
+/* ================= WHY CHOOSE US ================= */
+
+.why-us {
+    padding: 110px 10%;
+
+    background-color: #fffaf2;
+
+    text-align: center;
+}
+
+
+.why-us-heading {
+    margin-bottom: 55px;
+}
+
+
+.why-us-heading h2 {
+    color: #4a2113;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 56px;
+
+    font-weight: 600;
+}
+
+
+/* Three reasons */
+.why-items {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+
+.why-item {
+    padding: 20px;
+}
+
+
+/* Gold icon */
+.why-icon {
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0 auto 25px;
+
+    border: 2px solid #e8b84f;
+
+    border-radius: 50%;
+
+    color: #b97925;
+
+    font-size: 31px;
+}
+
+
+.why-item h3 {
+    color: #4a2113;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 29px;
+
+    margin-bottom: 15px;
+}
+
+
+.why-item p {
+    color: #725b4e;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 70px 10% 25px;
+
+    background-color: #3f1d11;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.footer-logo {
+    color: #f5c76b;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-symbol {
+    color: #e8b84f;
+
+    font-size: 30px;
+
+    margin-right: 8px;
+}
+
+
+footer > p {
+    color: #e7cda7;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+
+.footer-links a {
+    color: #f5eadc;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    color: #e8b84f;
+}
+
+
+.footer-bottom {
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    color: #c8ab94;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+}
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        gap: 15px;
+    }
+
+
+    .logo {
+        font-size: 23px;
+    }
+
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+
+    .welcome {
+        flex-direction: column;
+
+        gap: 65px;
+    }
+
+
+    .welcome-image,
+    .welcome-content {
+        width: 100%;
+    }
+
+
+    .food-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .why-items {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 16px 5%;
+    }
+
+
+    nav {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 20px;
+    }
+
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .hero-subtitle {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .welcome {
+        padding: 80px 7%;
+    }
+
+
+    .welcome-image img {
+        height: 350px;
+    }
+
+
+    .experience-box {
+        right: 10px;
+
+        bottom: 20px;
+
+        padding: 17px;
+    }
+
+
+    .welcome-content h2,
+    .featured-heading h2,
+    .why-us-heading h2 {
+        font-size: 43px;
+    }
+
+
+    .featured,
+    .why-us {
+        padding: 80px 7%;
+    }
+
+
+    .food-cards {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+}
+/* Show the complete hero image on mobile */
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 600px;
+
+        background-size: contain;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-color: #4a2113;
+    }
+
+}

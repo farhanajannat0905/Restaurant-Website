@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokshi Restaurant | Heritage & Fine Dining</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Color Palette: Luxury Off-White & Deep Burgundy (Khoiree) */
+        :root {
+            --burgundy: #58111A;        /* Classic Khoiree */
+            --burgundy-light: #7A1C28;
+            --white: #FFFFFF;
+            --off-white: #FAF8F5;      /* Warm Luxury White */
+            --text-dark: #2A2A2A;
+            --text-muted: #666666;
+            --font-title: 'Cinzel', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Typography Styles */
+        h1, h2, h3, h4 {
+            font-family: var(--font-title);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--burgundy);
+            margin-bottom: 5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: var(--burgundy);
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--burgundy);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--burgundy);
+        }
+
+        /* Header Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--burgundy);
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--burgundy);
+        }
+
+        /* Section Layout Structure */
+        section {
+            padding: 100px 8%;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(88, 17, 26, 0.15);
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .img-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .text-box h3 {
+            color: var(--burgundy);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .text-box p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background-color: var(--white);
+        }
+
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--off-white);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(88, 17, 26, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            color: var(--burgundy);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Chefs Section (3 Chefs) */
+        .chefs-section {
+            background-color: var(--off-white);
+        }
+
+        .chefs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .chef-card {
+            background-color: var(--white);
+            border-bottom: 3px solid var(--burgundy);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+
+        .chef-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        .chef-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .chef-info h4 {
+            color: var(--burgundy);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .chef-info span {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .chef-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--burgundy);
+            color: var(--white);
+            padding: 60px 8% 30px;
+            text-align: center;
+        }
+
+        footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .grid-2, .mission-cards, .chefs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <a href="#" class="logo">NOKSHI</a>
+        <ul class="nav-links">
+            <li><a href="#story">Story</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#tradition">Tradition</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Story Section -->
+    <section id="story">
+        <h2 class="section-title">The Story of Nokshi</h2>
+        <p class="section-subtitle">Stitching Tradition into Modern Gastronomy</p>
+        <div class="grid-2">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1000&auto=format&fit=crop" alt="Nokshi Restaurant Interior Design">
+            </div>
+            <div class="text-box">
+                <h3>Crafted Like Fine Embroidery</h3>
+                <p>Inspired by the intricate artistry of Bengali <i>Nakshi Kantha</i>, Nokshi Restaurant was founded with a vision to weave centuries-old culinary heritage with modern fine-dining perfection. Just as every stitch tells a story in art, every dish crafted in our kitchen embodies deep passion and culture.</p>
+                <p>From sourcing rare indigenous spices to incorporating progressive global cooking techniques, Nokshi serves as a sanctuary for food connoisseurs seeking an authentic yet world-class dining experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission-section">
+        <h2 class="section-title">Our Mission & Values</h2>
+        <p class="section-subtitle">Dedicated to Culinary Excellence</p>
+        <div class="mission-cards">
+            <div class="card">
+                <h4>Authentic Heritage</h4>
+                <p>We honor timeless ancestral recipes by sourcing organic, locally grown farm ingredients that preserve authentic regional flavors.</p>
+            </div>
+            <div class="card">
+                <h4>Refined Hospitality</h4>
+                <p>To provide every guest with an intimate, luxury dining experience rooted in warmth, elegance, and impeccable attention to detail.</p>
+            </div>
+            <div class="card">
+                <h4>Culinary Artistry</h4>
+                <p>We treat every plate as a canvas, blending traditional roots with modern gastronomic aesthetics and meticulous precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tradition Section -->
+    <section id="tradition">
+        <h2 class="section-title">Time-Honored Tradition</h2>
+        <p class="section-subtitle">Preserving the Culinary Roots</p>
+        <div class="grid-2">
+            <div class="text-box">
+                <h3>Mastery of Slow Cooking</h3>
+                <p>At Nokshi, we believe that true flavor cannot be rushed. Our signature dishes are cooked using traditional clay-oven techniques, slow-simmered rich reductions, and hand-ground spices crafted fresh every morning.</p>
+                <p>We bridge the gap between historical culinary rituals and high-end modern presentation, ensuring every bite is a tribute to our rich gastronomic heritage.</p>
+            </div>
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1000&auto=format&fit=crop" alt="Heritage Gourmet Dish Presentation">
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Team / 3 Chefs Section -->
+    <section id="chefs" class="chefs-section">
+        <h2 class="section-title">Our Master Chefs</h2>
+        <p class="section-subtitle">The Culinary Artisans Behind Nokshi</p>
+        <div class="chefs-grid">
+            
+            <!-- Chef 1 -->
+            <div class="chef-card">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" alt="Executive Chef Tanvir Ahmed">
+                <div class="chef-info">
+                    <h4>Tanvir Ahmed</h4>
+                    <span>Executive Head Chef</span>
+                    <p>Bringing over 18 years of global culinary experience, Chef Tanvir leads the Nokshi kitchen with a passion for elevated heritage dining.</p>
+                </div>
+            </div>
+
+            <!-- Chef 2 -->
+            <div class="chef-card">
+                <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=800&auto=format&fit=crop" alt="Chef de Cuisine Sophia Rahman">
+                <div class="chef-info">
+                    <h4>Sophia Rahman</h4>
+                    <span>Chef De Cuisine</span>
+                    <p>A specialist in progressive gastronomy, Chef Sophia redefines classical flavors with dynamic, modern presentation styles.</p>
+                </div>
+            </div>
+
+            <!-- Chef 3 -->
+            <div class="chef-card">
+                <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?q=80&w=800&auto=format&fit=crop" alt="Head Pastry Chef Marcus Vance">
+                <div class="chef-info">
+                    <h4>Marcus Vance</h4>
+                    <span>Head Pastry Chef</span>
+                    <p>Mastering the art of delicate desserts, Chef Marcus crafts decadent sweet creations infused with traditional spices and florals.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>NOKSHI RESTAURANT</h2>
+        <p>Road 2, Dhanmondi, Dhaka, Bangladesh | Reservations: +880 1700-000000</p>
+        <div class="copyright">
+            &copy; 2026 Nokshi Restaurant. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
+fonts.googleapis.com
+fonts.googleapis.com

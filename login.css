@@ -1,0 +1,686 @@
+/* ===============================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    background-color: #fffaf2;
+}
+
+
+/* ===============================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* ===============================
+   LEFT BANNER
+================================ */
+
+.login-banner {
+    position: relative;
+
+    width: 48%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px;
+
+    color: white;
+
+    background-image:
+        url("images/hero-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Dark brown overlay */
+.banner-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background-color:
+        rgba(55, 24, 12, 0.70);
+}
+
+
+/* Banner text */
+.banner-content {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 520px;
+}
+
+
+/* Nokshi logo */
+.banner-logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #f5c76b;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-decoration: none;
+
+    margin-bottom: 65px;
+}
+
+
+/* Logo symbol */
+.logo-symbol {
+    color: #e8b84f;
+
+    font-size: 34px;
+
+    line-height: 1;
+}
+
+
+/* Small golden title */
+.banner-subtitle {
+    color: #e8b84f;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Welcome heading */
+.banner-content h1 {
+    color: #fff8e8;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 68px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+/* Banner paragraph */
+.banner-description {
+    color: #f2dfc7;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    max-width: 450px;
+
+    margin-bottom: 40px;
+}
+
+
+/* Back to Home */
+.back-home {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #f5c76b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.back-home:hover {
+    color: white;
+
+    transform: translateX(-5px);
+}
+
+
+/* ===============================
+   RIGHT LOGIN AREA
+================================ */
+
+.login-form-area {
+    width: 52%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px;
+
+    background-color: #fffaf2;
+}
+
+
+/* Login box */
+.login-box {
+    width: 100%;
+
+    max-width: 450px;
+}
+
+
+/* Small heading */
+.form-small-title {
+    color: #b97925;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Sign In heading */
+.login-box h2 {
+    color: #4a2113;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 58px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+
+/* Form description */
+.form-description {
+    color: #725b4e;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* ===============================
+   FORM INPUTS
+================================ */
+
+.input-group {
+    margin-bottom: 23px;
+}
+
+
+.input-group label {
+    display: block;
+
+    color: #4a2113;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    height: 53px;
+
+    padding: 0 17px;
+
+    border:
+        1px solid #d8c4ad;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #4a2113;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+/* Input when clicked */
+.input-group input:focus {
+    border-color: #b97925;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(185, 121, 37, 0.12);
+}
+
+
+/* Placeholder */
+.input-group input::placeholder {
+    color: #aa978b;
+}
+
+
+/* ===============================
+   PASSWORD
+================================ */
+
+.password-box {
+    position: relative;
+}
+
+
+.password-box input {
+    padding-right: 75px;
+}
+
+
+/* Show/Hide button */
+.toggle-password {
+    position: absolute;
+
+    top: 50%;
+
+    right: 13px;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #a66b26;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.toggle-password:hover {
+    color: #4a2113;
+}
+
+
+/* ===============================
+   REMEMBER / FORGOT
+================================ */
+
+.form-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 5px 0 30px;
+}
+
+
+/* Remember checkbox */
+.remember-me {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #725b4e;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.remember-me input {
+    accent-color: #5c2b1a;
+
+    width: 15px;
+
+    height: 15px;
+
+    cursor: pointer;
+}
+
+
+/* Forgot password */
+.forgot-password {
+    color: #a66b26;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.forgot-password:hover {
+    color: #4a2113;
+
+    text-decoration: underline;
+}
+
+
+/* ===============================
+   LOGIN BUTTON
+================================ */
+
+.login-button {
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #5c2b1a;
+
+    color: white;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.login-button:hover {
+    background-color: #8a4728;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(70, 30, 15, 0.20);
+}
+
+
+/* Message */
+.message {
+    min-height: 22px;
+
+    margin-top: 17px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* Success message */
+.message.success {
+    color: #4d7a45;
+}
+
+
+/* Error message */
+.message.error {
+    color: #b13d32;
+}
+
+
+/* ===============================
+   SIGN UP
+================================ */
+
+.signup-text {
+    color: #725b4e;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    margin-top: 28px;
+}
+
+
+.signup-text a {
+    color: #a66b26;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.signup-text a:hover {
+    color: #4a2113;
+
+    text-decoration: underline;
+}
+
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .login-banner {
+        width: 42%;
+
+        padding: 40px;
+    }
+
+
+    .login-form-area {
+        width: 58%;
+
+        padding: 45px;
+    }
+
+
+    .banner-content h1 {
+        font-size: 55px;
+    }
+
+
+    .banner-logo {
+        font-size: 32px;
+
+        margin-bottom: 50px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .login-page {
+        display: block;
+    }
+
+
+    /* Small top banner */
+    .login-banner {
+        width: 100%;
+
+        min-height: 270px;
+
+        padding: 35px 7%;
+
+        justify-content: flex-start;
+
+        align-items: center;
+    }
+
+
+    .banner-logo {
+        font-size: 30px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .logo-symbol {
+        font-size: 27px;
+    }
+
+
+    .banner-subtitle {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .banner-content h1 {
+        font-size: 48px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .banner-description {
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        margin-bottom: 18px;
+    }
+
+
+    .back-home {
+        font-size: 12px;
+    }
+
+
+    /* Login form */
+    .login-form-area {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 60px 7%;
+    }
+
+
+    .login-box h2 {
+        font-size: 50px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .form-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 13px;
+    }
+
+
+    .login-form-area {
+        padding: 50px 6%;
+    }
+
+}

@@ -134,7 +134,10 @@ loginForm.addEventListener(
         }
 
 
-        // Demo success message
+        // ===============================
+        // LOGIN SUCCESS
+        // ===============================
+
         message.textContent =
             "Login successful! Welcome to Nokshi.";
 
@@ -143,12 +146,12 @@ loginForm.addEventListener(
         );
 
 
-        // Clear password
-        password.value = "";
+        // Redirect to homepage after 1 second
+        setTimeout(function () {
 
+            window.location.href = "index.html";
 
-        // You can redirect later:
-        // window.location.href = "index.html";
+        }, 1000);
 
     }
 );

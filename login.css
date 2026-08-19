@@ -4,9 +4,7 @@
 
 * {
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
 }
 
@@ -66,7 +64,8 @@ body {
 }
 
 
-/* Dark brown overlay */
+/* Dark overlay */
+
 .banner-overlay {
     position: absolute;
 
@@ -78,6 +77,7 @@ body {
 
 
 /* Banner text */
+
 .banner-content {
     position: relative;
 
@@ -88,6 +88,7 @@ body {
 
 
 /* Nokshi logo */
+
 .banner-logo {
     display: inline-flex;
 
@@ -115,6 +116,7 @@ body {
 
 
 /* Logo symbol */
+
 .logo-symbol {
     color: #e8b84f;
 
@@ -125,6 +127,7 @@ body {
 
 
 /* Small golden title */
+
 .banner-subtitle {
     color: #e8b84f;
 
@@ -139,6 +142,7 @@ body {
 
 
 /* Welcome heading */
+
 .banner-content h1 {
     color: #fff8e8;
 
@@ -158,6 +162,7 @@ body {
 
 
 /* Banner paragraph */
+
 .banner-description {
     color: #f2dfc7;
 
@@ -172,6 +177,7 @@ body {
 
 
 /* Back to Home */
+
 .back-home {
     display: inline-flex;
 
@@ -218,6 +224,7 @@ body {
 
 
 /* Login box */
+
 .login-box {
     width: 100%;
 
@@ -226,6 +233,7 @@ body {
 
 
 /* Small heading */
+
 .form-small-title {
     color: #b97925;
 
@@ -239,7 +247,8 @@ body {
 }
 
 
-/* Sign In heading */
+/* Sign In / Create Account heading */
+
 .login-box h2 {
     color: #4a2113;
 
@@ -259,6 +268,7 @@ body {
 
 
 /* Form description */
+
 .form-description {
     color: #725b4e;
 
@@ -322,6 +332,7 @@ body {
 
 
 /* Input when clicked */
+
 .input-group input:focus {
     border-color: #b97925;
 
@@ -332,6 +343,7 @@ body {
 
 
 /* Placeholder */
+
 .input-group input::placeholder {
     color: #aa978b;
 }
@@ -352,6 +364,7 @@ body {
 
 
 /* Show/Hide button */
+
 .toggle-password {
     position: absolute;
 
@@ -405,6 +418,7 @@ body {
 
 
 /* Remember checkbox */
+
 .remember-me {
     display: flex;
 
@@ -432,6 +446,7 @@ body {
 
 
 /* Forgot password */
+
 .forgot-password {
     color: #a66b26;
 
@@ -493,7 +508,10 @@ body {
 }
 
 
-/* Message */
+/* ===============================
+   MESSAGE
+================================ */
+
 .message {
     min-height: 22px;
 
@@ -507,20 +525,22 @@ body {
 }
 
 
-/* Success message */
+/* Success */
+
 .message.success {
     color: #4d7a45;
 }
 
 
-/* Error message */
+/* Error */
+
 .message.error {
     color: #b13d32;
 }
 
 
 /* ===============================
-   SIGN UP
+   SIGN UP TEXT
 ================================ */
 
 .signup-text {
@@ -547,6 +567,20 @@ body {
     color: #4a2113;
 
     text-decoration: underline;
+}
+
+
+/* ===============================
+   SIGNUP SECTION
+================================ */
+
+#signupSection {
+    display: none;
+}
+
+
+#signupSection.active {
+    display: block;
 }
 
 
@@ -596,6 +630,7 @@ body {
 
 
     /* Small top banner */
+
     .login-banner {
         width: 100%;
 
@@ -652,6 +687,7 @@ body {
 
 
     /* Login form */
+
     .login-form-area {
         width: 100%;
 
@@ -667,6 +703,10 @@ body {
 
 }
 
+
+/* ===============================
+   SMALL MOBILE
+================================ */
 
 @media (max-width: 400px) {
 

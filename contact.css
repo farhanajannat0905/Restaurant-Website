@@ -1,4 +1,4 @@
-/* CONTACT HERO */
+/* HERO */
 
 .contact-hero{
 background-image:
@@ -9,8 +9,7 @@ rgba(45,18,8,0.55)
 url("contact-bg.jpg");
 }
 
-
-/* CONTACT INFO */
+/* INFO SECTION */
 
 .contact-info{
 display:grid;
@@ -30,15 +29,14 @@ box-shadow:0 10px 25px rgba(0,0,0,0.08);
 .contact-box h3{
 color:#4a2113;
 margin-bottom:15px;
+font-size:28px;
 font-family:"Cormorant Garamond", serif;
-font-size:30px;
 }
 
 .contact-box p{
 color:#725b4e;
 line-height:1.8;
 }
-
 
 /* FORM SECTION */
 
@@ -48,7 +46,7 @@ background:#f2e4d1;
 }
 
 .contact-form-container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 background:white;
 padding:50px;
@@ -56,10 +54,10 @@ box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 .contact-form-container h2{
-color:#4a2113;
-font-size:54px;
-font-family:"Cormorant Garamond", serif;
+font-size:52px;
 margin-bottom:20px;
+font-family:"Cormorant Garamond", serif;
+color:#4a2113;
 }
 
 .input-group{
@@ -81,19 +79,14 @@ border:1px solid #ddd;
 font-size:15px;
 }
 
-.input-group textarea{
-resize:vertical;
-}
-
 .contact-button{
 background:#5c2b1a;
 color:white;
 border:none;
 padding:15px 35px;
 cursor:pointer;
-font-size:15px;
+font-size:16px;
 font-weight:600;
-transition:0.3s;
 }
 
 .contact-button:hover{
@@ -113,6 +106,38 @@ color:green;
 color:red;
 }
 
+/* TABLE */
+
+.reservation-title{
+margin-top:60px;
+text-align:center;
+}
+
+#reservationTable{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+}
+
+#reservationTable th,
+#reservationTable td{
+border:1px solid #ddd;
+padding:12px;
+text-align:center;
+}
+
+#reservationTable th{
+background:#5c2b1a;
+color:white;
+}
+
+#reservationTable tr:nth-child(even){
+background:#f7f7f7;
+}
+
+#reservationTable tr:hover{
+background:#f2e4d1;
+}
 
 /* MOBILE */
 
@@ -127,7 +152,12 @@ padding:30px;
 }
 
 .contact-form-container h2{
-font-size:40px;
+font-size:38px;
+}
+
+#reservationTable{
+display:block;
+overflow-x:auto;
 }
 
 }

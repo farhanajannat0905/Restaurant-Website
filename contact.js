@@ -1,58 +1,112 @@
-const contactForm =
-document.getElementById("contactForm");
+const reservationForm =
+document.getElementById("reservationForm");
+
+const reservationList =
+document.getElementById("reservationList");
 
 const formMessage =
 document.getElementById("formMessage");
 
-contactForm.addEventListener(
+let reservations =
+JSON.parse(localStorage.getItem("reservations")) || [];
+
+displayReservations();
+
+reservationForm.addEventListener(
 "submit",
 function(event){
 
 event.preventDefault();
 
-formMessage.classList.remove(
-"success",
-"error"
-);
+const customerName =
+document.getElementById("customerName").value.trim();
 
-const name =
-document.getElementById("name").value.trim();
+const phone =
+document.getElementById("phone").value.trim();
 
 const email =
 document.getElementById("email").value.trim();
 
-const subject =
-document.getElementById("subject").value.trim();
+const guests =
+document.getElementById("guests").value;
 
-const message =
-document.getElementById("message").value.trim();
+const date =
+document.getElementById("date").value;
+
+const time =
+document.getElementById("time").value;
+
+const specialRequest =
+document.getElementById("specialRequest").value.trim();
 
 if(
-name === "" ||
-email === "" ||
-subject === "" ||
-message === ""
+customerName === "" ||
+phone === "" ||
+guests === "" ||
+date === "" ||
+time === ""
 ){
 
 formMessage.textContent =
-"Please fill in all fields.";
+"Please fill in all required fields.";
 
-formMessage.classList.add(
-"error"
-);
+formMessage.classList.remove("success");
+formMessage.classList.add("error");
 
 return;
-
 }
+
+const reservation = {
+
+customerName,
+phone,
+email,
+guests,
+date,
+time,
+specialRequest
+
+};
+
+reservations.push(reservation);
+
+localStorage.setItem(
+"reservations",
+JSON.stringify(reservations)
+);
+
+displayReservations();
 
 formMessage.textContent =
-"Thank you! Your message has been sent successfully.";
+"Table booked successfully!";
 
-formMessage.classList.add(
-"success"
-);
+formMessage.classList.remove("error");
+formMessage.classList.add("success");
 
-contactForm.reset();
+reservationForm.reset();
 
 }
 );
+
+function displayReservations(){
+
+reservationList.innerHTML = "";
+
+reservations.forEach(function(reservation){
+
+const row =
+document.createElement("tr");
+
+row.innerHTML = `
+<td>${reservation.customerName}</td>
+<td>${reservation.phone}</td>
+<td>${reservation.guests}</td>
+<td>${reservation.date}</td>
+<td>${reservation.time}</td>
+`;
+
+reservationList.appendChild(row);
+
+});
+
+}

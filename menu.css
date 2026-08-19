@@ -1,3 +1,110 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background-image: url("hero-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Light image overlay */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(255, 250, 242, 0.78);
+
+    z-index: 0;
+}
+
+
+/* Hero text/content */
+
+.hero .overlay {
+    position: relative;
+
+    z-index: 1;
+
+    background: transparent;
+
+    padding: 50px 30px;
+
+    width: 100%;
+}
+
+
+/* Hero heading */
+
+.hero h1 {
+    color: #5c2b1a;
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Hero paragraph */
+
+.hero p {
+    color: #4a2113;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Explore Menu button */
+
+.hero .btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background-color: #5c2b1a;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.hero .btn:hover {
+    background-color: #8a4728;
+
+    transform: translateY(-2px);
+}
 * {
     margin: 0;
     padding: 0;

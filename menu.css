@@ -1,8 +1,17 @@
-/* =========================
-   HERO SECTION
-========================= */
+/* ================= HERO ================= */
 
 .hero {
+
+    background-image: url("hero-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    height: 80vh;
+
     min-height: 500px;
 
     display: flex;
@@ -15,84 +24,86 @@
 
     position: relative;
 
-    background-image: url("hero-bg.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
     overflow: hidden;
 }
 
 
-/* Light image overlay */
+/* Light overlay over background image */
 
 .hero::before {
+
     content: "";
 
     position: absolute;
 
     inset: 0;
 
-    background-color: rgba(255, 250, 242, 0.78);
+    background: rgba(255, 248, 240, 0.75);
 
     z-index: 0;
 }
 
 
-/* Hero text/content */
+/* Text area */
 
-.hero .overlay {
+.overlay {
+
     position: relative;
 
     z-index: 1;
 
-    background: transparent;
+    background: rgba(255, 255, 255, 0.45);
 
-    padding: 50px 30px;
+    color: #5c2b1a;
 
-    width: 100%;
+    padding: 45px;
+
+    border-radius: 10px;
+
+    max-width: 700px;
+
+    margin: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Hero heading */
-
-.hero h1 {
-    color: #5c2b1a;
+.overlay h1 {
 
     font-size: 45px;
 
     margin-bottom: 15px;
+
+    color: #5c2b1a;
 }
 
 
-/* Hero paragraph */
+.overlay p {
 
-.hero p {
+    line-height: 1.8;
+
     color: #4a2113;
-
-    font-size: 16px;
-
-    margin-bottom: 25px;
 }
 
 
 /* Explore Menu button */
 
-.hero .btn {
+.btn {
+
     display: inline-block;
 
-    padding: 14px 30px;
+    margin-top: 20px;
 
-    background-color: #5c2b1a;
+    background: #5c2b1a;
 
     color: white;
 
+    padding: 12px 25px;
+
     text-decoration: none;
 
-    border-radius: 4px;
+    border-radius: 5px;
 
     font-weight: 600;
 
@@ -100,8 +111,11 @@
 }
 
 
-.hero .btn:hover {
-    background-color: #8a4728;
+.btn:hover {
+
+    background: #8a4728;
+
+    color: white;
 
     transform: translateY(-2px);
 }
